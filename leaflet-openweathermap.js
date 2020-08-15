@@ -728,7 +728,7 @@ L.OWM.ProgressControl = L.Control.extend({
 	},
 
 	onAdd: function(map) {
-		this._map = map;
+		//this._map = map;
 		this.options.owmInstance.on('owmloadingstart', this._activate, this);
 		this.options.owmInstance.on('owmloadingend', this._deactivate, this);
 		return this._container;
@@ -750,7 +750,7 @@ L.OWM.ProgressControl = L.Control.extend({
 		this.options.owmInstance.off('owmloadingstart', this._activate, this);
 		this.options.owmInstance.off('owmloadingend', this._deactivate, this);
 		this._container.style.display = 'none';
-		this._map = null;
+		//this._map = null;
 	}
 
 });
